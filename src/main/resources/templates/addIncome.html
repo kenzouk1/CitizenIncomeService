@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Citizen Income</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>Please add your current income</h1>
+    <form action="#" th:action="@{/addIncome}" th:object="${regularAmount}" method="post">
+        <p>
+            <label>Payment Frequency:</label>
+            <select th:field="*{frequency}">
+                <option th:each="p : ${frequencyList}" th:value="${p}" th:text="${p}" />
+            </select>
+        </p>
+        <p>
+            <label>Payment Amount (in £):</label>
+            <input type="text" th:field="*{amount}">
+        </p>
+        <p>
+            <input type="submit" value="Submit"/> <input type="reset" value="Reset">
+        </p>
+    </form>
+</body>
+</html>
