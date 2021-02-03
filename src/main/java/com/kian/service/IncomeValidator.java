@@ -1,6 +1,5 @@
 package com.kian.service;
 
-
 import com.kian.exception.InvalidWeeklyIncomeException;
 import com.kian.model.RegularAmount;
 

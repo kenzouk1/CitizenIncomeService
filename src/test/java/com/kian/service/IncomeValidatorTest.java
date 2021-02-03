@@ -1,4 +1,4 @@
-package service;
+package com.kian.service;
 
 import com.kian.model.Frequency;
 import com.kian.model.RegularAmount;
